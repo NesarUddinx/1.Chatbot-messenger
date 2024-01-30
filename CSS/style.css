@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 .container{
-  background: #F8F8F8;
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -14,15 +13,33 @@
   width: 100%;
   box-shadow: 0 2px 5px #DFDFDF;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   position: sticky;
 }
 .chat_header .profileInfo{
+  position: absolute;
+  left: 50px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+.chat_header #back{
+  position: absolute;
+  left: 20px;
+}
+.chat_header #phone{
+  position: absolute;
+  right: 125px;
+}
+.chat_header #video{
+  position: absolute;
+  right: 75px;
+}
+.chat_header #info{
+  position: absolute;
+  right: 25px;
 }
 .chat_header .profileInfo:hover{
   opacity: 0.6;
@@ -52,7 +69,7 @@
 }
 .chat_header i{
   color: #9400CE;
-  font-size: 22px;
+  font-size: 20px;
 }
 .chat_body{
   height: 82%;
@@ -67,25 +84,46 @@
   height: 8%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   position: sticky;
   padding: 0;
 }
+.chat_input #plus{
+  position: absolute;
+  left: 20px;
+}
+.chat_input #camera {
+  position: absolute;
+  left: 58px;
+}
+.chat_input #image {
+  position: absolute;
+  left: 98px;
+}
+.chat_input #microphone {
+  position: absolute;
+  left: 135px;
+}
+.chat_input #like {
+  position: absolute;
+  right: 15px;
+}
+.chat_input #send {
+  position: absolute;
+  right:15px;
+}
 .chat_input i{
   color: #0073CE;
-  font-size: 22px;
+  font-size: 20px;
 }
 .inputDiv{
-  position: relative;
+  position: absolute;
+  right: 50px;
   height: 35px;
   width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.inputDiv::hover{
-  
 }
 .inputDiv input{
   height: 100%;
@@ -162,5 +200,15 @@
   100%{
     transform: translate(0%);
     opacity: 1;
+  }
+}
+
+@media (min-width: 900px){
+  .inputDiv{
+    width: 760px;
+  }
+  .chat_header .profileInfo{
+    
+    
   }
 }
